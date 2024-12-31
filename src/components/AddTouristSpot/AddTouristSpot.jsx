@@ -14,9 +14,10 @@ const AddTouristSpot = () => {
         const travelTime = form.get('time');
         const visit = form.get('visit');
         const description = form.get('description');
-        // console.log(name, image, countryName, location, seasonality, averageCost, travelTime, visit, description);
+        const userName = form.get('user');
+        const userEmail = form.get('email');
 
-        const spot = { image: image, tourists_spot_name: name, country_name: countryName, location: location, short_description: description, average_cost: averageCost, seasonality: seasonality, travel_time: travelTime, total_visitors_per_year: visit };
+        const spot = { image: image, tourists_spot_name: name, country_name: countryName, location: location, short_description: description, average_cost: averageCost, seasonality: seasonality, travel_time: travelTime, total_visitors_per_year: visit, user_name: userName, user_email: userEmail };
         fetch('http://localhost:5000/spots', {
             method: "POST",
             headers: {
@@ -108,6 +109,21 @@ const AddTouristSpot = () => {
                     <textarea name="description" id="" className='w-full h-20 rounded-xl px-3 outline-slate-600 py-2 border-2 border-[#2E89BA]'></textarea>
                 </div>
                 {/* row 6 */}
+                <div className='flex lg:flex-row flex-col w-full justify-between items-center gap-2 lg:gap-12 md:gap-2'>
+                    <div className='flex flex-col w-full'>
+                        <label className='label'>
+                            <span className='font-medium text-white'>User Name</span>
+                        </label>
+                        <input type="text" name='user' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
+                    </div>
+                    <div className='flex flex-col w-full'>
+                        <label className='label'>
+                            <span className='font-medium text-white'>User Email</span>
+                        </label>
+                        <input type="email" name='email' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
+                    </div>
+                </div>
+                {/* row 7 */}
                 <div className='flex justify-center items-center'>
                     <input type="submit" value={'Add Tourist Spot'} className='text-center text-white w-1/2 bg-[#0F4471] py-3 mt-2 btn hover:bg-[#FC3C3C] duration-1000 text-md font-medium' />
                 </div>
