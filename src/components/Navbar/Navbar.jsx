@@ -79,7 +79,7 @@ const Navbar = () => {
                 {
                     user && <div className='flex gap-3'>
                         <div data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} data-tooltip-place='left'>
-                            <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+                            <img className="w-12 rounded-full border-[3px] border-[#FC3C3C]" src={user.photoURL} alt="" />
                         </div>
                         <Tooltip id="my-tooltip" />
                     </div>

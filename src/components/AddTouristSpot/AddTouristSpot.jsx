@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Swal from 'sweetalert2';
 
 const AddTouristSpot = () => {
     const handleAddTouristSpot = e =>{
@@ -13,9 +14,27 @@ const AddTouristSpot = () => {
         const travelTime = form.get('time');
         const visit = form.get('visit');
         const description = form.get('description');
-        console.log(name, image, countryName, location, seasonality, averageCost, travelTime, visit, description);
+        // console.log(name, image, countryName, location, seasonality, averageCost, travelTime, visit, description);
 
-        
+        const spot = { image: image, tourists_spot_name: name, country_name: countryName, location: location, short_description: description, average_cost: averageCost, seasonality: seasonality, travel_time: travelTime, total_visitors_per_year: visit };
+        fetch('http://localhost:5000/spots', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(spot)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Added Successfully!",
+                    icon: "success",
+                    draggable: true
+                  });
+            }
+        })
     }
     return (
         <div className='px-10 pb-10'>
