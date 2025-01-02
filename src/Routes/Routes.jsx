@@ -6,6 +6,8 @@ import AddTouristSpot from "../components/AddTouristSpot/AddTouristSpot";
 import Register from "../components/LogInformation/Register";
 import Login from "../components/LogInformation/Login";
 import CardDetails from "../components/AllTouristsSpot/CardDetails";
+import MyList from "../components/MyList/MyList";
+import Update from "../components/MyList/Update";
 
 const router = createBrowserRouter([
     {
@@ -34,8 +36,18 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path: '/details',
-                element: <CardDetails></CardDetails>
+                path: '/details/:id',
+                element: <CardDetails></CardDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+            },
+            {
+                path: '/list',
+                element: <MyList></MyList>,
+                loader: () => fetch('http://localhost:5000/spots')
+            },
+            {
+                path: '/update',
+                element: <Update></Update>
             }
         ]
     }

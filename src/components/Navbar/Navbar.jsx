@@ -9,7 +9,7 @@ import { Bounce, toast } from 'react-toastify';
 
 const Navbar = () => {
 
-    const [collapse, setCollapse] = useState(true);
+    const [collapse, setCollapse] = useState(false);
     const {user, logOut} = useContext(AuthContext);
 
     const handleLogout = () =>{
@@ -48,7 +48,9 @@ const Navbar = () => {
         {
             user && <NavLink to={'/addTouristSpot'}>Add Tourist Spot</NavLink>
         }
-        <NavLink to={'/myList'}>My List</NavLink>
+        {
+            user && <NavLink to={'/list'}>My List</NavLink>
+        }
         {
             user ? <button onClick={handleLogout} className='bg-[#0F4471] py-1 px-3 text-white rounded-md'>Logout</button> :
              <NavLink to={'/register'}><button className='bg-[#0F4471] py-1 px-3 text-white rounded-md'>Register</button></NavLink>

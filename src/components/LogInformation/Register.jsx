@@ -22,10 +22,10 @@ const Register = () => {
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-
         const expression = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
         if(!expression.test(password)){
-            return toast.error('You need must 6 character and one Uppercase letter and one Lowercase letter', {
+            toast.error('You need must 6 character and one Uppercase letter and one Lowercase letter', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -40,11 +40,13 @@ const Register = () => {
         createUser(email, password)
         .then(result =>{
             const newUser = result.user;
-            naviGate('/');
+            console.log(newUser);
+            
             updateProfile(auth.currentUser, {
                 displayName: name,
                 photoURL: photo
             })
+            naviGate('/');
             toast.success('🦄 Registered Successfully!', {
                 position: "top-center",
                 autoClose: 5000,

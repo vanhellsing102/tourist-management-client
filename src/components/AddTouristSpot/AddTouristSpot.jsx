@@ -34,6 +34,7 @@ const AddTouristSpot = () => {
                     icon: "success",
                     draggable: true
                   });
+                  e.target.reset();
             }
         })
     }
@@ -114,13 +115,13 @@ const AddTouristSpot = () => {
                         <label className='label'>
                             <span className='font-medium text-white'>User Name</span>
                         </label>
-                        <input type="text" name='user' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
+                        <input required type="text" name='user' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
                     </div>
                     <div className='flex flex-col w-full'>
                         <label className='label'>
                             <span className='font-medium text-white'>User Email</span>
                         </label>
-                        <input type="email" name='email' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
+                        <input required type="email" name='email' className='w-full outline-slate-600 py-2 border-2 border-[#2E89BA] rounded-xl px-3' />
                     </div>
                 </div>
                 {/* row 7 */}

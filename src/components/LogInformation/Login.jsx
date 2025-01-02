@@ -13,6 +13,10 @@ const Login = () => {
     const handleGithubLogin = () =>{
         githubLogin()
         .then(result =>{
+            // const credential = GithubAuthProvider.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
+            console.log(result.user._UserImpl );
+            
             naviGate('/');
         })
         .catch(error =>{
