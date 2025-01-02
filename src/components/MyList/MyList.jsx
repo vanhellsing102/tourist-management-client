@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../ContextProviders/ContextProviders';
-import { Link, useLoaderData } from 'react-router-dom';
+import { data, Link, useLoaderData } from 'react-router-dom';
 import { MdDeleteForever } from "react-icons/md";
 import { RiUpload2Fill } from "react-icons/ri";
 import Swal from 'sweetalert2';
@@ -20,7 +20,7 @@ const MyList = () => {
         })
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
+            // console.log(data);
             Swal.fire({
                 title: "Are you sure?",
                 text: "You will want to detete this!",
@@ -33,7 +33,7 @@ const MyList = () => {
                 if (result.isConfirmed) {
                   Swal.fire({
                     title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    text: "Your tourist spot has been deleted.",
                     icon: "success"
                   });
                   const exitSpot = deletedSpot.filter(spot => spot._id !== id);
@@ -68,7 +68,7 @@ const MyList = () => {
                                     <td>{spot.country_name}</td>
                                     <td>{spot.seasonality}</td>
                                     <td>{spot.average_cost}</td>
-                                    <td><Link to={'/update'}><RiUpload2Fill className='text-xl'></RiUpload2Fill></Link></td>
+                                    <td><Link to={`/update/${spot._id}`}><RiUpload2Fill className='text-xl'></RiUpload2Fill></Link></td>
                                     <td><button onClick={() => handleDelete(spot._id)}><MdDeleteForever className='text-xl'></MdDeleteForever></button></td>
                                 </tr>
                             </tbody>

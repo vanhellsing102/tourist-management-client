@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Swal from 'sweetalert2';
+import 'animate.css';
 
 const AddTouristSpot = () => {
     const handleAddTouristSpot = e =>{
@@ -40,7 +41,7 @@ const AddTouristSpot = () => {
     }
     return (
         <div className='px-10 pb-10'>
-            <h1 className='text-5xl font-bold text-center py-3'>Add Tourist Spot</h1>
+            <h1 className='text-5xl font-bold text-center py-3 animate__animated animate__shakeX'>Add Tourist Spot</h1>
             <form onSubmit={handleAddTouristSpot} className='px-5 lg:px-10 md:px-7 bg-[#083358] rounded-xl pb-3'>
                 {/* row 1 */}
                 <div className='flex lg:flex-row flex-col w-full justify-between items-center gap-2 lg:gap-12 md:gap-2'>
