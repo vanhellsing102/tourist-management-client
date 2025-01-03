@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "country_name": "Bangladesh",
+    "image": "https://i.postimg.cc/WbQbCyRW/pexels-photo-3560020.jpg",
+    "short_description": "The United States, located in North America, is a culturally diverse nation known for its iconic landmarks like the Grand Canyon, Statue of Liberty, and Hollywood. Its major cities, including New York, Los Angeles, and Washington D.C., are global hubs of culture, finance, and politics. The USA is celebrated for its innovation, being home to Silicon Valley and leading universities. From national parks to vibrant urban centers, the country offers something for everyone. Its cultural heritage includes influences from Native Americans, immigrants, and African Americans, shaping its music, cuisine, and festivals enjoyed worldwide."
+  },
+  {
+    "id": 2,
+    "country_name": "Thailand",
+    "image": "https://i.postimg.cc/k5CMXtgW/pexels-photo-176398.jpg",
+    "short_description": "Canada, the second-largest country globally, is celebrated for its breathtaking natural beauty, including Banff National Park, Niagara Falls, and the Rocky Mountains. A bilingual nation, English and French are widely spoken. Its cities, such as Toronto, Vancouver, and Montreal, are known for their cultural diversity and high quality of life. Rich in natural resources and wildlife, Canada offers outdoor enthusiasts activities like skiing, hiking, and kayaking. Its history includes Indigenous cultures and European settlers, creating a unique tapestry of traditions. Canadians are known for their friendliness, making it a welcoming destination for visitors worldwide."
+  },
+  {
+    "id": 3,
+    "country_name": "Indonesia",
+    "image": "https://i.postimg.cc/85P1LQW5/pexels-photo-2032110.jpg",
+    "short_description": "India, a South Asian nation, is known for its rich history, cultural diversity, and vibrant traditions. Home to iconic landmarks like the Taj Mahal and Jaipur’s palaces, it offers a blend of ancient heritage and modern innovation. India’s landscapes range from the Himalayan mountains to tropical beaches. Its cities, including Delhi, Mumbai, and Bangalore, are economic and cultural hubs. Festivals like Diwali and Holi showcase the country’s colorful spirit. Known for yoga, spices, and diverse cuisines, India attracts millions of visitors yearly. It remains a spiritual center and a dynamic, fast-growing economy."
+  },
+  {
+    "id": 4,
+    "country_name": "Malaysia",
+    "image": "https://i.postimg.cc/KzqmNqr5/pexels-photo-1.jpg",
+    "short_description": "Australia, located in Oceania, is famous for its unique wildlife, including kangaroos and koalas, and natural wonders like the Great Barrier Reef. Its vibrant cities, such as Sydney and Melbourne, blend modern culture with natural beauty. The country is known for its outdoor lifestyle, offering activities like surfing, hiking, and diving. Australian culture reflects Indigenous traditions and British influences, evident in its art, food, and sports. The Sydney Opera House and Uluru are iconic landmarks. Visitors can explore the Outback, rainforests, and pristine beaches, making Australia a must-visit destination for travelers worldwide."
+  },
+  {
+    "id": 5,
+    "country_name": "Vietname",
+    "image": "https://i.postimg.cc/xjZ0NZdf/pexels-photo-2796627.jpg",
+    "short_description": "Japan, an island nation in East Asia, is known for its blend of ancient traditions and modern innovations. Iconic landmarks include Mount Fuji, Tokyo’s bustling streets, and Kyoto’s historic temples. The country is famous for cherry blossoms, traditional tea ceremonies, and cutting-edge technology. Its cuisine, including sushi, ramen, and tempura, is loved globally. Japan’s cultural exports, like anime, manga, and gaming, have a global fanbase. Visitors can experience a rich history in Hiroshima and Nara or explore futuristic advancements in cities like Osaka. Japan’s stunning natural landscapes add to its allure."
+  },
+  {
+    "id": 6,
+    "country_name": "Cambodia",
+    "image": "https://i.postimg.cc/Mp2qdjRg/pexels-photo-3226403.jpg",
+    "short_description": "France, located in Western Europe, is renowned for its art, fashion, and cuisine. Paris, the capital, features world-famous landmarks like the Eiffel Tower, the Louvre, and Notre-Dame Cathedral. Beyond the city, visitors can explore the French Riviera, lavender fields of Provence, and the vineyards of Bordeaux. France’s historic sites, such as the Palace of Versailles and Mont Saint-Michel, showcase its rich heritage. Known for its wine and cheese, French gastronomy is celebrated worldwide. Festivals like Bastille Day highlight its vibrant culture. France remains a top travel destination for its beauty, history, and charm."
+  }
+]

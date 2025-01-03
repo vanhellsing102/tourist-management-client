@@ -44,7 +44,7 @@ const Navbar = () => {
     
     const links = <>
         <NavLink to={'/'}>Home</NavLink>
-        <NavLink to={'/allTouristsSpot'}>All Tourists Spot</NavLink>
+        <NavLink to={'/allTouristSpot'}>All Tourists Spot</NavLink>
         {
             user && <NavLink to={'/addTouristSpot'}>Add Tourist Spot</NavLink>
         }

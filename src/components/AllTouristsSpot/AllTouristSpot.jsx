@@ -1,12 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
 import TouristSpotCard from './TouristSpotCard';
 import 'animate.css';
+import { useLoaderData } from 'react-router-dom';
 
 const AllTouristSpot = () => {
-
     const allSpot = useLoaderData();
-    
     return (
         <div>
             <h1 className='text-4xl py-2 font-bold text-center mt-7 animate__rubberBand animate__animated'>Your Fouvarite Tourist Spot is Here</h1>

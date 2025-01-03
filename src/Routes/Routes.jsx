@@ -8,24 +8,28 @@ import Login from "../components/LogInformation/Login";
 import CardDetails from "../components/AllTouristsSpot/CardDetails";
 import MyList from "../components/MyList/MyList";
 import Update from "../components/MyList/Update";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/country')
             },
             {
-                path: '/allTouristsSpot',
-                element: <AllTouristSpot></AllTouristSpot>, 
+                path: '/allTouristSpot',
+                element: <PrivateRoutes><AllTouristSpot></AllTouristSpot></PrivateRoutes>, 
                 loader: () => fetch('http://localhost:5000/spots')
             },
             {
                 path: '/addTouristSpot',
-                element: <AddTouristSpot></AddTouristSpot>
+                element: <PrivateRoutes><AddTouristSpot></AddTouristSpot></PrivateRoutes>
             },
             {
                 path: '/register',
@@ -42,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/list',
-                element: <MyList></MyList>,
+                element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/spots')
             },
             {
