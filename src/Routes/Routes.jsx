@@ -10,6 +10,7 @@ import MyList from "../components/MyList/MyList";
 import Update from "../components/MyList/Update";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import CountryCardSection from "../components/Home/CountryCardSection";
 
 const router = createBrowserRouter([
     {
@@ -53,7 +54,12 @@ const router = createBrowserRouter([
                 path: '/update/:id',
                 element: <Update></Update>,
                 loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
-            }
+            },
+            {
+                path: '/country-card-section/:id',
+                element: <CountryCardSection></CountryCardSection>,
+                loader: ({params}) => fetch(`http://localhost:5000/country/${params.id}`)
+            },
         ]
     }
 ])

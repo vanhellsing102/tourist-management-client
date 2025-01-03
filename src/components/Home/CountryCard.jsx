@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom';
 
 const CountryCard = ({country}) => {
 
-    const { country_name, image, short_description } = country;
+    const { country_name, image, short_description, _id } = country;
 
     const [seeMore, setSeeMore] = useState(null);
-    console.log(seeMore);
-    
     
     return (
-        <Link className='bg-[#0F4471] p-7 rounded-xl hover:scale-105 duration-700'>
-            <div>
-                <img className='rounded-xl' src={image} alt="" />
-            </div>
+        <div className='bg-[#0F4471] p-7 rounded-xl hover:scale-105 duration-700'>
+            <img className='rounded-xl' src={image} alt="" />
             <h1 className='text-4xl text-[#FC3C3C] text-center font-semibold mt-3'>{country_name}</h1>
             {
                 short_description.length > 150 
@@ -29,8 +25,8 @@ const CountryCard = ({country}) => {
                     }
                 </div>
             }
-            <p className='mt-3'>{short_description.length > 200 }</p>
-        </Link>
+            <Link to={`/country-card-section/${_id}`}><button className='w-full mt-3 bg-[#A5BFDD] hover:bg-[#2E89BA] py-2 rounded-2xl duration-700 hover:scale-105'>View All Spot</button></Link>
+        </div>
     );
 };
 
