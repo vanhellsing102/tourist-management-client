@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 const Root = () => {
     
-    const [toggle, setToggle] = useState(true);
+    const [toggle, setToggle] = useState(false);
     
     return (
         <div className={toggle ?" bg-black" : "bg-white"}>
