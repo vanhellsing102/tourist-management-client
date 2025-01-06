@@ -7,7 +7,7 @@ import { AuthContext } from '../../ContextProviders/ContextProviders';
 import { Tooltip } from 'react-tooltip'
 import { Bounce, toast } from 'react-toastify';
 
-const Navbar = () => {
+const Navbar = ({setToggle, toggle}) => {
 
     const [collapse, setCollapse] = useState(false);
     const {user, logOut} = useContext(AuthContext);
@@ -58,7 +58,8 @@ const Navbar = () => {
     </>
     return (
         <div className='px-4 md:px-7 lg:px-9 py-3 flex justify-between items-center bg-[#2E89BA]'>
-            <div className=''>
+            <div className='flex items-center justify-center gap-2'>
+                
                 <h1 className='text-[#083358] text-4xl font-bold animate__animated animate__bounce'>Journey <span className='text-[#FC3C3C]'>Horizon</span></h1>
             </div>
             <div className='lg:flex md:flex hidden gap-7 text-md font-semibold justify-between items-center'>
@@ -75,20 +76,25 @@ const Navbar = () => {
                     
                 }
             </div>
-            {
-                user &&
+            <div className='flex items-center gap-3'>
                 <div>
-                {
-                    user && <div className='flex gap-3'>
-                        <div data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} data-tooltip-place='left'>
+                    {
+                        user &&
+                        <div>
+                            {
+                         user && <div className='flex gap-3'>
+                            <div data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} data-tooltip-place='left'>
                             <img className="w-12 rounded-full border-[3px] border-[#FC3C3C]" src={user.photoURL} alt="" />
                         </div>
                         <Tooltip id="my-tooltip" />
                     </div>
                     
-                }
+                    }
+                    </div>
+                         }
                 </div>
-            }
+                <input onClick={() =>setToggle(!toggle)} type="checkbox" className="toggle toggle-xs" defaultChecked />
+            </div>
         </div>
     );
 };
