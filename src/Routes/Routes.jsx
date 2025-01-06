@@ -21,12 +21,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/country')
+                loader: () => fetch('https://tourist-management-server-gxvh13zvz-murads-projects-e024a269.vercel.app/country')
             },
             {
                 path: '/allTouristSpot',
                 element: <PrivateRoutes><AllTouristSpot></AllTouristSpot></PrivateRoutes>, 
-                loader: () => fetch('http://localhost:5000/spots')
+                loader: () => fetch('https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app')
             },
             {
                 path: '/addTouristSpot',
@@ -43,22 +43,22 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <CardDetails></CardDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+                loader: ({params}) => fetch(`https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app/${params.id}`)
             },
             {
                 path: '/list',
                 element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/spots')
+                loader: () => fetch('https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app')
             },
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+                loader: ({params}) => fetch(`https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app/${params.id}`)
             },
             {
                 path: '/country-card-section/:id',
                 element: <CountryCardSection></CountryCardSection>,
-                loader: ({params}) => fetch(`http://localhost:5000/country/${params.id}`)
+                loader: ({params}) => fetch(`https://tourist-management-server-gxvh13zvz-murads-projects-e024a269.vercel.app/country/${params.id}`)
             },
         ]
     }

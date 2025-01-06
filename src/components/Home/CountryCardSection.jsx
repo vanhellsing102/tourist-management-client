@@ -9,7 +9,7 @@ const CountryCardSection = () => {
     const [spots, setSpots] = useState();
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/spots`)
+        fetch(`https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app`)
         .then(res => res.json())
         .then(data =>{
             const remainingSpot = data.filter(spot => spot.country_name.toLowerCase() == countryName);

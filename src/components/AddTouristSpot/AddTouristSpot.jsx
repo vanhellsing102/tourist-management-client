@@ -19,7 +19,7 @@ const AddTouristSpot = () => {
         const userEmail = form.get('email');
 
         const spot = { image: image, tourists_spot_name: name, country_name: countryName, location: location, short_description: description, average_cost: averageCost, seasonality: seasonality, travel_time: travelTime, total_visitors_per_year: visit, user_name: userName, user_email: userEmail };
-        fetch('http://localhost:5000/spots', {
+        fetch('https://tourist-management-server-5kv3ldbcf-murads-projects-e024a269.vercel.app', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
